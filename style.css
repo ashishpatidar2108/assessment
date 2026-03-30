@@ -1,0 +1,334 @@
+:root {
+    --primary-blue: #4abee2;
+    --dark-blue: #37cacf;
+    --light-bg: #f8f9fa;
+    --text-gray: #666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* If using an image logo instead of text, control its size here */
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.username-btn {
+    background: #e2e9ec;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: var(--primary-blue);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.hero-content h1 span {
+    color: var(--primary-blue);
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    margin: 20px 0;
+}
+
+.hero-content button {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero-image img {
+    width: 400px;
+}
+
+/* Achievements */
+.achievements {
+    background: var(--primary-blue);
+    color: rgb(8, 5, 5);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 8%;
+    margin: 60px 0; /* add vertical spacing around the achievements section */
+    align-items: center;
+}
+
+.achievements h2 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.achievements .stat {
+    text-align: center;
+}
+
+.achievements .stat strong {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.achievements .stat p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* Booking Section */
+.booking-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    padding: 60px 8%;
+    background: #f4f7fe;
+}
+
+.services-left, .cart-box, .form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Make service icons match the primary branding color */
+.service-info i {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.service-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* General Button Styles */
+.action-btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Pricing highlight */
+.price {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Add Item State (Capture5 style) */
+.btn-add {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Remove Item State (Capture1 style) */
+.btn-remove {
+    background-color: #fff5f5;
+    color: #ff4d4d;
+    border-color: #ffcccc;
+}
+
+/* Hide/Show logic for the empty cart message */
+.hidden {
+    display: none;
+}
+
+/* Booking confirmation message */
+.booking-message {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.booking-message--success {
+    color: green;
+}
+
+.booking-message--error {
+    color: #b02a37;
+}
+
+/* Cart & Form */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th { text-align: left; color: var(--text-gray); font-size: 0.9rem; }
+td { padding: 10px 0; }
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+}
+
+.form-box { margin-top: 20px; }
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group { display: flex; gap: 10px; }
+
+.book-btn {
+    width: 100%;
+    background: #5c67f2;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Quality Features */
+.quality-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 8%;
+    text-align: center;
+    gap: 20px;
+}
+
+.feature i { font-size: 2rem; margin-bottom: 15px; }
+
+/* Newsletter */
+.newsletter {
+    background: var(--primary-blue);
+    padding: 60px 8%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 10px;
+    align-items: start;
+}
+
+.newsletter input {
+    width: 100%;
+}
+
+.newsletter button {
+    grid-column: 1;
+    padding: 10px 18px;
+    width: max-content;
+}
+
+@media (max-width: 600px) {
+    .newsletter form {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter button {
+        grid-column: 1;
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 60px 8%;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-links-row a {
+    display: inline-block;
+}
+
+.social-icons i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
